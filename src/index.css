@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'Geograph';
+	font-weight: 900;
+	src: url('/geograph-bold.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Geograph';
+	font-weight: 800;
+	src: url('/geograph-medium.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Geograph';
+	font-weight: normal;
+	src: url('/geograph-regular.otf') format('opentype');
+}
