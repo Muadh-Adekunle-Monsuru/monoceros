@@ -2,7 +2,7 @@ import Logo from './Logo';
 
 export default function Section5() {
 	return (
-		<div className='h-full bg-black mt-20 z-50 w-full  flex flex-col justify-between pt-56'>
+		<div className='h-full bg-black  z-50 w-full  flex flex-col justify-between md:pt-56 sticky '>
 			<div className='flex justify-between text-white p-5 text-xs'>
 				<div></div>
 				<div>

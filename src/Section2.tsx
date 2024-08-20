@@ -1,9 +1,13 @@
 import { useScroll, useTransform, motion } from 'framer-motion';
 
 export default function Section2() {
-	const sectionHeight = 470;
+	const sectionHeight = window.innerHeight;
 	const { scrollY } = useScroll();
-	const scale = useTransform(scrollY, [550, 1020], ['100%', '50%']);
+	const scale = useTransform(
+		scrollY,
+		[sectionHeight, sectionHeight * 2],
+		['100%', '50%']
+	);
 	return (
 		<section className='pt-56 pb-20 h-screen bg-white text-black font-geograph'>
 			<motion.div

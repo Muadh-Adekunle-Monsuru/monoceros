@@ -54,7 +54,7 @@ export default function Header({ isInView }: { isInView: Boolean }) {
 							key={index}
 							onMouseOver={() => mouseHover(index)}
 							onMouseLeave={() => mouseLeave(index)}
-							className='cursor-pointer'
+							className='cursor-pointer hidden md:block'
 						>
 							{item}
 							<motion.span

@@ -1,15 +1,17 @@
 import { useScroll, useTransform, motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 export default function Section1() {
-	const sectionHeight = 470;
+	const [windowHeight, setWindowHeight] = useState(window.innerHeight || 540);
 	const { scrollY } = useScroll();
-	const scale = useTransform(scrollY, [0, sectionHeight], ['100%', '50%']);
+	const scale = useTransform(scrollY, [0, windowHeight], ['100%', '50%']);
+
 	return (
 		<section className='pt-16 h-screen sticky top-0 -z-0 '>
 			<motion.div
 				className=' flex flex-col items-center justify-around '
-				style={{ scale, height: sectionHeight }}
+				style={{ scale, height: windowHeight }}
 			>
-				<h1 className='font-geograph font-extrabold blur-[0.34px] uppercase  text-5xl text-white tracking-wider text-center'>
+				<h1 className='font-geograph font-extrabold blur-[0.34px] uppercase text-3xl  md:text-5xl text-white tracking-wider text-center'>
 					<span className='block'>When you see differently,</span>
 					<span className='block'>you can act originally,</span>
 					<span className='block'>and achieve exceptionally</span>

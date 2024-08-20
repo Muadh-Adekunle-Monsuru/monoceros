@@ -26,7 +26,10 @@ export default function App() {
 		<div className='  text-white bg-black'>
 			<AnimatePresence mode='wait'>
 				{showLanding && (
-					<motion.div key={'landing'} exit={{ y: '-100%' }}>
+					<motion.div
+						key={'landing'}
+						exit={{ y: '-100%', transition: { duration: 0.3 } }}
+					>
 						<Landing />
 					</motion.div>
 				)}
@@ -44,9 +47,7 @@ export default function App() {
 						>
 							<Section4 />
 						</section>
-						<div className='sticky h-screen bottom-0 z-30 bg-pink-200'>
-							<Section5 />
-						</div>
+						<Section5 />
 					</motion.main>
 				)}
 			</AnimatePresence>
