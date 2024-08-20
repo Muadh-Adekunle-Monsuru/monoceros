@@ -1,10 +1,14 @@
-import { useScroll, useTransform, motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { useEffect, useState } from 'react';
 export default function Section1() {
 	const [windowHeight, setWindowHeight] = useState(window.innerHeight || 540);
 	const { scrollY } = useScroll();
 	const scale = useTransform(scrollY, [0, windowHeight], ['100%', '50%']);
-
+	useEffect(() => {
+		if (windowHeight > 5000) {
+			setWindowHeight(1000);
+		}
+	});
 	return (
 		<section className='pt-16 h-screen sticky top-0 -z-0 '>
 			<motion.div

@@ -65,7 +65,7 @@ export default function Header({ isInView }: { isInView: Boolean }) {
 					);
 				})}
 			</motion.div>
-			<div className='w-1/3'>
+			<div className='md:w-1/3 w-1/2'>
 				<Logo isInView={isInView} />
 			</div>
 			<div className='w-full'></div>
